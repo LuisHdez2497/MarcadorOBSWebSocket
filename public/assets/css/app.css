@@ -1,0 +1,43 @@
+body{
+    background-image: url('../img/logo.png');
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #06213e;
+}
+
+#address_button{
+    background-color: #f05f30;
+    color: white;
+    border: 2px solid #f05f30;
+}
+
+#address_button:hover{
+    background-color: #f06e43;
+    color: white;
+    border-color: #06213e;
+}
+
+#score_container{
+    grid-template-areas: 
+        "local local local"
+        "visitor visitor visitor"
+        "foot foot foot";
+    grid-template-rows: 47% 47% auto;
+    grid-template-columns: 33% 33% 34%;
+}
+
+#local{
+    grid-area: local;
+    width: 100%;
+}
+
+#visitor{
+    grid-area: visitor;
+    width: 100%;
+}
+
+#foot{
+    grid-area: foot;
+    width: 100%;
+}

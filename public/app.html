@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="scripts/obs-websocket-js/dist/obs-websocket.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <title>Marcador Digital OBS</title>
+  </head>
+  <body class="flex items-center justify-center min-h-screen">
+    <div id="connection_container" class="border-4 border-orange-400 min-w-[400px] min-h-[300px] p-4 rounded-xl bg-white flex flex-col justify-between">
+        <h1 class="w-full text-center text-2xl font-semibold">Conexion al marcador</h1>
+        <div>
+            <p class="w-full font-semibold">Ingresa la direccion IP del OBS</p>
+            <input id="ip_address" placeholder="Direccion IP OBS" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <p class="w-full mt-3 font-semibold">Ingresa el ID del partido</p>
+            <input id="game_id" placeholder="Identificador del partido" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
+        <button id="address_button" class="w-full text-center text-xl font-semibold py-1 rounded-xl">Iniciar</button>
+    </div>
+    <div id="score_container" class="hidden w-full min-h-screen bg-white grid">
+        <div id="local" class="bg-orange-100"></div>
+        <div id="visitor" class="bg-blue-100"></div>
+        <div id="foot" class="bg-purple-100"></div>
+    </div>
+  </body>
+</html>
